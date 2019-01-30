@@ -1,7 +1,7 @@
 #Creating an AWS Lambda Python Layer
 ## Introduction
 So, recently Amazon released a new feature for their Lambda services, called Layers.
-Previously you had to upload your dependencies with every single lambda package, and when working with some more simpler machine learning and data pipelines, this can get quite out of hand.
+Previously you had to upload your dependencies with every single lambda package, and when working with machine learning and data pipelines, this can get quite out of hand, since it is needed to upload a new set of dependencies each time you deployed a Lambda Function.
 
 This tutorial aims to help you create your own layer package with the dependencies you use the most across your Lambdas, so you can take advantage of this feature and reduce the size of your Lambda functions.
 
