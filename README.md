@@ -10,7 +10,7 @@ This installation assumes that you know how to start a EC2 Amazon-Linux instance
 
 # Installation
 After creating and connecting to your EC2 instance, just run the script on it, replacing any private information with your own(e.g <MY_ACCESS_KEY>, <MY_BUCKET>, etc).
-The script will generate the zip file containing all dependencies installed using pip and stripping them to reduce it's size,
+The script will generate the zip file containing all dependencies installed using pip and remove some unnecessary files to reduce package size,
 the dependencies can be changed providing that you keep in mind the 250MB limit, and are the following (for python 3.6):
 - Numpy
 - Pandas

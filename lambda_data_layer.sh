@@ -30,7 +30,8 @@ git clone --recursive https://github.com/dmlc/xgboost;
 cd xgboost;make -j4;cd python-package;sudo $VIRTUAL_ENV/bin/python setup.py install;cd;
 
 # Remove unnecessary stuff for deployment
-sudo find $VIRTUAL_ENV/ -name "*.so" | xargs strip;
+# Could also try to strip the files, but I do not recommend it, unless absolutely necessary
+#sudo find $VIRTUAL_ENV/ -name "*.so" | xargs strip;
 rsync -a --prune-empty-dirs $VIRTUAL_ENV/lib*/python*/site-packages/ ~/base_pkg/python/
 pushd ~/base_pkg/;
 zip -r -9 -q ~/base_pkg/base_pkg.zip . -x \*.pyc ./python/pip\* ./python/setuptools\* ./python/wheel\* ./base_pkg\*;
